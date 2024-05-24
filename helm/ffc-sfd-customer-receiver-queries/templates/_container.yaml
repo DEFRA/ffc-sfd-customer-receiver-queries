@@ -1,0 +1,2 @@
+{{- define "ffc-sfd-customer-receiver-queries.container" -}}
+{{- end -}}

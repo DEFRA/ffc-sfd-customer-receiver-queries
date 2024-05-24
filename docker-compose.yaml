@@ -1,0 +1,13 @@
+services:
+  ffc-sfd-customer-receiver-queries:
+    build:
+      context: .
+      target: production
+    image: ffc-sfd-customer-receiver-queries
+    container_name: ffc-sfd-customer-receiver-queries
+    depends_on:
+      - ffc-sfd-customer-receiver-queries-postgres
+    environment:
+      APPINSIGHTS_CLOUDROLE: ffc-sfd-customer-receiver-queries-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+
