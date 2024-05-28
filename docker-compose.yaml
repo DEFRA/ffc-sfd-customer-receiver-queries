@@ -5,9 +5,16 @@ services:
       target: production
     image: ffc-sfd-customer-receiver-queries
     container_name: ffc-sfd-customer-receiver-queries
-    depends_on:
-      - ffc-sfd-customer-receiver-queries-postgres
     environment:
       APPINSIGHTS_CLOUDROLE: ffc-sfd-customer-receiver-queries-local
       APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+      MESSAGE_HOST: ${MESSAGE_HOST}
+      MESSAGE_USER: ${MESSAGE_USER}
+      MESSAGE_PASSWORD: ${MESSAGE_PASSWORD}
+      QUERIES_SUBSCRIPTION_ADDRESS: ${QUERIES_SUBSCRIPTION_ADDRESS}-${DEV_SUFFIX}
+      QUERIES_TOPIC_ADDRESS: ${QUERIES_TOPIC_ADDRESS}-${DEV_SUFFIX}
+      COSMOS_ENDPOINT: ${COSMOS_ENDPOINT}
+      COSMOS_KEY: ${COSMOS_KEY}
+      COSMOS_QUERIES_DATABASE: ${COSMOS_QUERIES_DATABASE}
+      COSMOS_QUERIES_CONTAINER: ${COSMOS_QUERIES_CONTAINER}
 
