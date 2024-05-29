@@ -1,6 +1,6 @@
 {
   "name": "ffc-sfd-customer-receiver-queries",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "homepage": "github.com?owner=defra&repo=ffc-sfd-customer-receiver-queries&organization=defra",
   "main": "app/index.js",
@@ -15,7 +15,7 @@
   },
   "author": "Defra",
   "contributors": [
-    "Rana Salem <rana.salem@defra.gov.uk"
+    "Rana Salem <rana.salem@defra.gov.uk>"
   ],
   "license": "OGL-UK-3.0",
   "dependencies": {
