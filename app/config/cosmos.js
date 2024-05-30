@@ -1,8 +1,8 @@
 const Joi = require('joi')
 
 const schema = Joi.object({
-  endpoint: Joi.string().required(),
-  key: Joi.string().required(),
+  endpoint: Joi.string(),
+  key: Joi.string(),
   queriesDatabase: Joi.string().required(),
   queriesContainer: Joi.string().required()
 })
