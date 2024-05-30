@@ -3,15 +3,15 @@ const Joi = require('joi')
 const schema = Joi.object({
   endpoint: Joi.string(),
   key: Joi.string(),
-  queriesDatabase: Joi.string().required(),
-  queriesContainer: Joi.string().required()
+  queriesDatabase: Joi.string().default('ffc-sfd-customer-receiver-queries'),
+  queriesContainer: Joi.string().default('queries-container')
 })
 
 const config = {
   endpoint: process.env.COSMOS_ENDPOINT,
   key: process.env.COSMOS_KEY,
-  queriesDatabase: 'ffc-sfd-customer-receiver-queries',
-  queriesContainer: 'queries-container'
+  queriesDatabase: process.env.COSMOS_QUERIES_CONTAINER || 'ffc-sfd-customer-receiver-queries',
+  queriesContainer: process.env.COSMOS_QUERIES_CONTAINER || 'queries-container'
 }
 
 const { error, value } = schema.validate(config, { abortEarly: false })
