@@ -3,3 +3,7 @@
   type: "keyvault"
 - key: MESSAGE_HOST
   value: "SNDADPINFSB3401.servicebus.windows.net"
+- key: QUERIES_TOPIC_ADDRESS
+  value: "fcp-sfd-customer-queries"
+- key: QUERIES_SUBSCRIPTION_ADDRESS
+  value: "fcp-sfd-customer-receiver-queries"
