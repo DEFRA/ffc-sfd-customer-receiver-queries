@@ -6,7 +6,7 @@ const sendNotification = async (message) => {
 
   await notifyClient.sendEmail(
     process.env.NOTIFY_TEMPLATE_ID,
-    'rana.salem@defra.gov.uk',
+    process.env.NOTIFY_TEST_EMAIL,
     {
       personalisation: {
         heading: message.body.heading,
