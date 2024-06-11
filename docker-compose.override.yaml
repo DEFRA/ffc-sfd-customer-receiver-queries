@@ -15,4 +15,3 @@ services:
       - ./test:/home/node/test
       - ./scripts:/home/node/scripts
       - ./package.json:/home/node/package.json
-      

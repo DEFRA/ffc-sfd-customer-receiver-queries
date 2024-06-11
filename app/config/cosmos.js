@@ -1,10 +1,10 @@
 const Joi = require('joi')
 
 const schema = Joi.object({
-  endpoint: Joi.string().required(),
-  key: Joi.string().required(),
-  queriesDatabase: Joi.string().required(),
-  queriesContainer: Joi.string().required()
+  endpoint: Joi.string().optional(),
+  key: Joi.string().optional(),
+  queriesDatabase: Joi.string().optional().default('ffc-sfd-customer-receiver-queries'),
+  queriesContainer: Joi.string().optional().default('queries-container')
 })
 
 const config = {
