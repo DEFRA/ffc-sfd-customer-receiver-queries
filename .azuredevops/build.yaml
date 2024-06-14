@@ -43,7 +43,6 @@ extends:
   parameters:
     teamName: "fcp-sfd"
     programmeName: "ffc"
-    projectName: "ffc-sfd-customer-receiver-messages"
     serviceName: "ffc-sfd-customer-receiver-queries"
     deployFromFeature: ${{ parameters.deployFromFeature }}
     deployConfigOnly: ${{ parameters.deployConfigOnly }}
