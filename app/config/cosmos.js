@@ -10,8 +10,8 @@ const schema = Joi.object({
 const config = {
   endpoint: process.env.COSMOS_ENDPOINT,
   key: process.env.COSMOS_KEY,
-  queriesDatabase: process.env.COSMOS_QUERIES_DATABASE,
-  queriesContainer: process.env.COSMOS_QUERIES_CONTAINER
+  queriesDatabase: 'ffc-sfd-customer-receiver-queries',
+  queriesContainer: 'queries-container'
 }
 
 const { error, value } = schema.validate(config, { abortEarly: false })
