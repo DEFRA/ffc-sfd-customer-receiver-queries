@@ -23,7 +23,7 @@ const startMessaging = async () => {
     receiverAction
   )
   await queriesReceiver.subscribe()
-  console.info('Messages receiver is ready to consume messages')
+  console.info('Queries receiver is ready to consume messages')
 }
 
 module.exports = { startMessaging }
