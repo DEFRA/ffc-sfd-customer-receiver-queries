@@ -23,7 +23,7 @@ const config = {
     username: process.env.MESSAGE_USER,
     password: process.env.MESSAGE_PASSWORD,
     useCredentialChain: process.env.NODE_ENV === PRODUCTION,
-    managedIdentityClientId: process.env.MANAGED_IDENTITY_CLIENT_ID,
+    managedIdentityClientId: process.env.AZURE_CLIENT_ID,
     appInsights:
       process.env.NODE_ENV === PRODUCTION
         ? require('applicationinsights')
