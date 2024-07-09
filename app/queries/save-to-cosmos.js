@@ -7,7 +7,7 @@ const saveToCosmos = async (message) => {
 
     await queriesDatabase
       .container(cosmosConfig.queriesContainer)
-      .items.create(message.body)
+      .item(message.id).replace(message.body)
 
     console.log('Message saved to CosmosDB:', message.body)
   } catch (error) {
