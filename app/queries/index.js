@@ -1,13 +1,11 @@
 const util = require('util')
 const { queryConfig } = require('../config')
 const { MessageReceiver } = require('ffc-messaging')
-const { saveToCosmos } = require('./save-to-cosmos')
 const { sendNotification } = require('./send-notification')
 
 const handleMessage = async (message, receiver) => {
   try {
     console.log('Received message:', message.body)
-    await saveToCosmos(message)
     await sendNotification(message)
     await receiver.completeMessage(message)
   } catch (err) {
