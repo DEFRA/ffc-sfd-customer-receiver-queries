@@ -6,7 +6,7 @@ const sendNotification = async (message) => {
 
     const latestResponse = message.body.responses[0]
 
-    if (latestResponse.internalUser === true) {
+    if (latestResponse.internalUser) {
       const emailPayload = {
         personalisation: {
           heading: latestResponse.heading,
@@ -21,7 +21,7 @@ const sendNotification = async (message) => {
         emailPayload
       )
 
-      console.log('Notify has sent an email notification: internalUser is true.\nEmail payload:', emailPayload)
+      console.log('Notify has sent an email notification: internalUser is true.')
     }
   } catch (error) {
     console.error('Error sending email:', error.response ? error.response.data : error.message)
