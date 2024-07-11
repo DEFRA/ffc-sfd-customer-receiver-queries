@@ -21,7 +21,7 @@ const sendNotification = async (message) => {
         emailPayload
       )
 
-      console.log('Notify has sent an email notification: internalUser is true.')
+      console.log('Notify has sent an email notification: internalUser is true.\n', emailPayload)
     }
   } catch (error) {
     console.error('Error sending email:', error.response ? error.response.data : error.message)
