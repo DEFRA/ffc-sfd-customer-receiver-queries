@@ -10,8 +10,8 @@ const sendNotification = async (message) => {
       process.env.NOTIFY_TEST_EMAIL,
       {
         personalisation: {
-          heading: message.body.heading,
-          content: message.body.body
+          heading: message.body.responses.heading,
+          content: message.body.responses.body
         },
         reference: uuidv4()
       }
