@@ -1,25 +1,30 @@
-const { v4: uuidv4 } = require('uuid')
 const NotifyClient = require('notifications-node-client').NotifyClient
 
 const sendNotification = async (message) => {
-  const notifyClient = new NotifyClient(process.env.NOTIFY_API_KEY)
+  try {
+    const notifyClient = new NotifyClient(process.env.NOTIFY_API_KEY)
 
-  if (message.body.internalUser) {
-    await notifyClient.sendEmail(
-      process.env.NOTIFY_TEMPLATE_ID,
-      process.env.NOTIFY_TEST_EMAIL,
-      {
+    const latestResponse = message.body.responses[0]
+
+    if (latestResponse.internalUser) {
+      const emailPayload = {
         personalisation: {
-          heading: message.body.heading,
-          content: message.body.body
+          heading: latestResponse.heading,
+          content: latestResponse.body
         },
-        reference: uuidv4()
+        reference: message.body.id
       }
-    )
 
-    console.log('Notify has sent an email to the external user: internalUser is set to true.')
-  } else {
-    console.log('Notify did not send email: internalUser is false.')
+      await notifyClient.sendEmail(
+        process.env.NOTIFY_TEMPLATE_ID,
+        process.env.NOTIFY_TEST_EMAIL,
+        emailPayload
+      )
+
+      console.log('Notify has sent an email notification: internalUser is true.\n', emailPayload)
+    }
+  } catch (error) {
+    console.error('Error sending email:', error.response ? error.response.data : error.message)
   }
 }
 
