@@ -7,3 +7,11 @@
   value: "fcp-sfd-customer-queries"
 - key: QUERIES_SUBSCRIPTION_ADDRESS
   value: "fcp-sfd-customer-receiver-queries"
+- key: NOTIFY_API_KEY
+  value: "{{servicename}}-NOTIFY-API-KEY"
+  type: "keyvault"
+- key: NOTIFY_TEMPLATE_ID
+  value: "{{servicename}}-NOTIFY-TEMPLATE-ID"
+  type: "keyvault"
+- key: NOTIFY_TEST_EMAIL
+  value: "rana.salem@defra.gov.uk"
