@@ -21,4 +21,4 @@
   value: "{{servicename}}-NOTIFY-TEMPLATE-ID"
   type: "keyvault"
 - key: NOTIFY_TEST_EMAIL
-  value: "rana.salem@defra.gov.uk" # change to your own email address
+  value: "rana.salem@fdmgroup.com" # change to your own email address
