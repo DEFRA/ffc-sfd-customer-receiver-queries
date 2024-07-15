@@ -2,8 +2,23 @@
   value: "{{servicename}}-APPINSIGHTS-CONNECTIONSTRING"
   type: "keyvault"
 - key: MESSAGE_HOST
-  value: "SNDADPINFSB4401.servicebus.windows.net"
+  value: "{{servicename}}-MESSAGE-HOST"
+  type: "keyvault"
+- key: MESSAGE_USER
+  value: "{{servicename}}-MESSAGE-USER"
+  type: "keyvault"
+- key: MESSAGE_PASSWORD
+  value: "{{servicename}}-MESSAGE-PASSWORD"
+  type: "keyvault"
 - key: QUERIES_TOPIC_ADDRESS
   value: "fcp-sfd-customer-queries"
 - key: QUERIES_SUBSCRIPTION_ADDRESS
   value: "fcp-sfd-customer-receiver-queries"
+- key: NOTIFY_API_KEY
+  value: "{{servicename}}-NOTIFY-API-KEY"
+  type: "keyvault"
+- key: NOTIFY_TEMPLATE_ID
+  value: "{{servicename}}-NOTIFY-TEMPLATE-ID"
+  type: "keyvault"
+- key: NOTIFY_TEST_EMAIL
+  value: "rana.salem@fdmgroup.com" # change to your own email address
