@@ -23,7 +23,7 @@
     "@hapi/hapi": "21.3.2",
     "applicationinsights": "2.8.0",
     "ffc-messaging": "2.9.0",
-    "joi": "17.13.1",
+    "joi": "17.13.3",
     "log-timestamp": "0.3.0",
     "notifications-node-client": "8.1.0",
     "uuidv4": "6.2.13"
