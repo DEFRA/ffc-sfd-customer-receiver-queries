@@ -19,7 +19,7 @@
   ],
   "license": "OGL-UK-3.0",
   "dependencies": {
-    "@azure/cosmos": "4.0.0",
+    "@azure/cosmos": "4.2.0",
     "@hapi/hapi": "21.3.2",
     "applicationinsights": "2.8.0",
     "ffc-messaging": "2.9.0",
